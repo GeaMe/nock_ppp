@@ -1,0 +1,49 @@
+StartSimulationEngine
+   /FileName:"Maze_driving/my_maze.xml"
+
+
+AddNewEntity  greenbox     /Position:0  0.5  0
+
+AddBoxShape
+   /Dimensions:0.4  0.4  0.4     /Mass:1
+   /Position:4    0.5   -2
+   /DiffuseColor:0.0    1    0.0    1
+
+
+AddNewEntity  bluesphere     /Position:0  0.5  0
+   
+AddSphereShape
+   /Radius:0.2     /Mass:1
+   /Position:-3.5  0.5  3.3
+   /DiffuseColor:0    0   1    1
+
+
+AddPioneer3DX
+   /Name:p3dx1     /Position:-3.2  0.1  -4.3  /Orientation:-0.005    -143.1    0
+
+AddWebCamEntity    cam1  /Position:0  0.5  0    /ParentEntity:p3dx1
+
+AddLaserRangeFinderEntity    lrf1
+   /Position:0  0.3  0
+   /ParentEntity:p3dx1
+   /DisableRendering:true
+
+AddColorSensorEntity    rgb1
+   /Position: 0 0.12 -0.2
+   /ParentEntity:p3dx1
+   /Dimensions:0.32  0.12  0.05
+
+SimpleVision    simplevision1
+	/CameraName:cam1
+	/Procedure_DetectColoredObject:proc1
+
+
+SimpleDashboard
+
+FlushScript  
+
+Procedure  proc1
+
+	print "OK"
+
+End
