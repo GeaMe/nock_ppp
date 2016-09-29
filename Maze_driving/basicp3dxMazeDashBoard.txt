@@ -18,7 +18,7 @@ AddSphereShape
    /DiffuseColor:0    0   1    1
 
 
-AddPioneer3DX
+AddPioneer3DX p3dx1
    /Name:p3dx1     /Position:-3.2  0.1  -4.3  /Orientation:-0.005    -143.1    0
 
 AddWebCamEntity    cam1  /Position:0  0.5  0    /ParentEntity:p3dx1
